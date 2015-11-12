@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a6a450a88a70ec0f62348f20c076177a",
-    "content-hash": "97a65ddfd75e56eb06298c9192afa45f",
+    "hash": "3259da635064f8b792d3373b100c4544",
+    "content-hash": "14ae8323293ec990d39a7a7f8871fd25",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1642,6 +1642,52 @@
                 "templating"
             ],
             "time": "2015-10-13 07:07:02"
+        },
+        {
+            "name": "uran1980/fancybox-bundle",
+            "version": "0.0.1",
+            "target-dir": "Uran1980/FancyBoxBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uran1980/fancybox-bundle.git",
+                "reference": "69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uran1980/fancybox-bundle/zipball/69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59",
+                "reference": "69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Uran1980\\FancyBoxBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Yakovlev",
+                    "email": "uran1980@gmail.com",
+                    "homepage": "https://github.com/uran1980"
+                }
+            ],
+            "description": "jQuery FancyBox Bundle for Symfony2",
+            "homepage": "http://www.fancyapps.com/fancybox/",
+            "keywords": [
+                "fancybox",
+                "javascript",
+                "jquery",
+                "symfony"
+            ],
+            "time": "2015-03-08 12:16:18"
         }
     ],
     "packages-dev": [

@@ -8,17 +8,43 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * Loads home page
-     * this twig file is found at /www/app/Resource/ 
-     * not in the actual src/AppBundle file structure
-     */
-    public function indexAction(Request $request)
+	/**
+	 * Display Home Page
+	 * @param Request $request
+	 * @return string - view
+	 */
+	public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-       // return $this->render('default/index.html.twig', array(
-           // 'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-       // ));
-       return $this->render('AppBundle:Default:index.html.twig',  array('base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..')));
+       return $this->render('AppBundle:Default:index.html.twig');
+    }
+
+	/**
+	 * Display Services Page
+	 * @param Request $request
+	 * @return string - view
+	 */
+	public function servicesAction(Request $request)
+    {
+       return $this->render('AppBundle:Default:services.html.twig');
+    }
+
+	/**
+	 * Display Gallery Page
+	 * @param Request $request
+	 * @return string - view
+	 */
+	public function galleryAction(Request $request)
+    {
+       return $this->render('AppBundle:Default:gallery.html.twig');
+    }
+
+	/**
+	 * Display Contact Page
+	 * @param Request $request
+	 * @return string - view
+	 */
+	public function contactAction(Request $request)
+    {
+       return $this->render('AppBundle:Default:contact.html.twig');
     }
 }

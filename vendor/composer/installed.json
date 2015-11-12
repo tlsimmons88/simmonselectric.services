@@ -1734,5 +1734,53 @@
             }
         ],
         "description": "This bundle generates code for you"
+    },
+    {
+        "name": "uran1980/fancybox-bundle",
+        "version": "0.0.1",
+        "version_normalized": "0.0.1.0",
+        "target-dir": "Uran1980/FancyBoxBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/uran1980/fancybox-bundle.git",
+            "reference": "69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/uran1980/fancybox-bundle/zipball/69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59",
+            "reference": "69d6ce4a4fb28ee186d8f8bfb30aaffad7bdad59",
+            "shasum": ""
+        },
+        "require": {
+            "symfony/framework-bundle": ">=2.1"
+        },
+        "time": "2015-03-08 12:16:18",
+        "type": "symfony-bundle",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Uran1980\\FancyBoxBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "GPLv2"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Yakovlev",
+                "email": "uran1980@gmail.com",
+                "homepage": "https://github.com/uran1980"
+            }
+        ],
+        "description": "jQuery FancyBox Bundle for Symfony2",
+        "homepage": "http://www.fancyapps.com/fancybox/",
+        "keywords": [
+            "fancybox",
+            "javascript",
+            "jquery",
+            "symfony"
+        ]
     }
 ]
