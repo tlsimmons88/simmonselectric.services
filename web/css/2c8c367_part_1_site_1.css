@@ -1,3 +1,14 @@
-#csstest {
-    background-color: green;
+.affix {
+	top: 0;
+	width: 100%;
+}
+
+.affix + .container-fluid {
+	padding-top: 70px;
+}
+
+#banner{
+	color: #fff;;
+	height:150px;
+	background-image: url("/web/img/banner.png");
 }

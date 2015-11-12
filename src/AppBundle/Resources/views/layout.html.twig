@@ -14,10 +14,20 @@
 	{% endstylesheets %}
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		<!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-	{% block stylesheets  %}{% endblock %}
+		<section id="wrapper">
+			<header id="header">
+				{{ include('AppBundle::banner.html.twig') }}
+				{{ include('AppBundle::navbar.html.twig') }}
+			</header>
+			{% block body %}{% endblock %}
+			{% block javascripts %}{% endblock %}
+			{% block stylesheets  %}{% endblock %}
+			{{ include('AppBundle::footer.html.twig') }}
+		</section>
     </body>
 </html>
