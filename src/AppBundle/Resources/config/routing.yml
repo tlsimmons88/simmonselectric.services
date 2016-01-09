@@ -4,9 +4,9 @@ home:
 services:
     path:  /services
     defaults: { _controller: AppBundle:Default:services }
-gallery:
-    path:  /gallery
-    defaults: { _controller: AppBundle:Default:gallery }
+portfolio:
+    path:  /portfolio
+    defaults: { _controller: AppBundle:Default:portfolio }
 contact:
     path:  /contact
     defaults: { _controller: AppBundle:Default:contact }

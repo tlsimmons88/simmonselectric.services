@@ -1,14 +1,31 @@
-.affix {
+/*.affix {
 	top: 0;
+	width: auto;
+}*/
+
+/*.affix + .container-fluid {
+	padding-top: 70px;
+}*/
+
+//This allows the banner to match the sze of the nav bar
+#banner{
+	margin: 0px 15px 0px 15px;
+	padding: 0px;
+	color: #fff;;
+}
+
+//This makes the banner image fit the full size of the div
+#banner img{
 	width: 100%;
 }
 
-.affix + .container-fluid {
-	padding-top: 70px;
+#footer{
+	text-align: center
 }
 
-#banner{
-	color: #fff;;
-	height:150px;
-	background-image: url("/web/img/banner.png");
+//This removes the rounded corners from the navbar so the banner and it is even/flush
+.navbar {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }

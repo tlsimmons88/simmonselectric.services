@@ -29,13 +29,13 @@ class DefaultController extends Controller
     }
 
 	/**
-	 * Display Gallery Page
+	 * Display Portfolio Page
 	 * @param Request $request
 	 * @return string - view
 	 */
-	public function galleryAction(Request $request)
+	public function portfolioAction(Request $request)
     {
-       return $this->render('AppBundle:Default:gallery.html.twig');
+       return $this->render('AppBundle:Default:portfolio.html.twig');
     }
 
 	/**

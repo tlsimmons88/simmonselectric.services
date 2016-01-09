@@ -1,3 +1,5 @@
+{% set explosion = app.request.attributes.get('_route')|split('_') %}
+{% set currentView = explosion[0] %}
 {% block navigation %}
 	<div class="container-fluid" id="navbar-container">
 		<nav class="navbar navbar-inverse">
@@ -11,10 +13,10 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ path('home') }}">Home</a></li>
-					<li><a href="{{ path('services') }}">Services</a></li>
-					<li><a href="{{ path('gallery') }}">Gallery</a></li>
-					<li><a href="{{ path('contact') }}">Contact</a></li>
+					<li {% if currentView == 'home' %}class="active"{% endif %} ><a href="{{ path('home') }}">Home</a></li>
+					<li {% if currentView == 'services' %}class="active"{% endif %} ><a href="{{ path('services') }}">Services</a></li>
+					<li {% if currentView == 'portfolio' %}class="active"{% endif %} ><a href="{{ path('portfolio') }}">Portfolio</a></li>
+					<li {% if currentView == 'contact' %}class="active"{% endif %} ><a href="{{ path('contact') }}">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
