@@ -2,6 +2,26 @@
 
 {% block body %}
 <div class="container-fluid" id="contact-container">
-	Contact Page
+	<div class="panel with-nav-tabs panel-default">
+		<div class="panel-heading clearfix">
+			<div>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1default" data-toggle="tab">Address</a></li>
+					<li><a href="#tab2default" data-toggle="tab">Email</a></li>
+					<li><a href="#tab3default" data-toggle="tab">Phone</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tab1default">
+					<p>D7109 Arlington Ave Suite A</p>
+					<p>Riverside CA 92503</p>
+				</div>
+				<div class="tab-pane fade" id="tab2default">Email Form here</div>
+				<div class="tab-pane fade" id="tab3default">(951) 353-2804</div>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}

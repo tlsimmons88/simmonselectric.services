@@ -7,12 +7,14 @@
 	padding-top: 70px;
 }*/
 
+//This allows the banner to match the sze of the nav bar
 #banner{
 	margin: 0px 15px 0px 15px;
 	padding: 0px;
 	color: #fff;;
 }
 
+//This makes the banner image fit the full size of the div
 #banner img{
 	width: 100%;
 }
@@ -21,8 +23,55 @@
 	text-align: center
 }
 
-.navbar {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+//This removes the rounded corners from the navbar so the banner and it is even/flush
+.navbar{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
+
+//Set the tab to the same color as the nav bar
+/*.nav-tabs{
+	background-color: #333333;
+}
+
+//Set the tab to the same color as the nav bar
+.nav-tabs>li>a{
+	background-color: #333333;
+	border-color: #333333;
+	color:#9d9d9d;
+}
+
+//Set the tab to the same color as the nav bar
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	border-color: #000;
+	background-color: #000;
+	color: #fff;
+}
+
+//Set the tab to the same color as the nav bar
+.nav-tabs>li>a:hover{
+	border-color: #333333;;
+	background-color: #333333;
+	color: #fff;
+}
+
+//Set the tab to the same color as the nav bar
+.panel-default > .panel-heading{
+	background-color: #333333;
+	border-color: #333333;
+}
+
+//All panel.with-nav-tabs is custom to chagne some of the view/look used for tabs
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .panel-heading .panel-title{
+    padding: 10px;
+}
+.panel.with-nav-tabs .nav-tabs{
+	border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+	margin-bottom: -1px;
+}*/
