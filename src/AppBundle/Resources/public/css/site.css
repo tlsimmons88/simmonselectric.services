@@ -1,11 +1,12 @@
-//This allows the banner to match the sze of the nav bar
+
+/*This allows the banner to match the sze of the nav bar*/
 #banner{
 	margin: 0px 15px 0px 15px;
 	padding: 0px;
 	color: #fff;;
 }
 
-//This makes the banner image fit the full size of the div
+/*This makes the banner image fit the full size of the div*/
 #banner img{
 	width: 100%;
 }
@@ -14,7 +15,7 @@
 	text-align: center
 }
 
-//This removes the rounded corners from the navbar so the banner and it is even/flush
+/*This removes the rounded corners from the navbar so the banner and it is even/flush*/
 .navbar{
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
