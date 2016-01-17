@@ -5,6 +5,8 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Entity\Enquiry;
+use AppBundle\Form\EnquiryType;
 
 class DefaultController extends Controller
 {
@@ -15,7 +17,7 @@ class DefaultController extends Controller
 	 */
 	public function indexAction(Request $request)
     {
-       return $this->render('AppBundle:Default:index.html.twig');
+		return $this->render('AppBundle:Default:index.html.twig');
     }
 
 	/**
@@ -25,7 +27,7 @@ class DefaultController extends Controller
 	 */
 	public function servicesAction(Request $request)
     {
-       return $this->render('AppBundle:Default:services.html.twig');
+		return $this->render('AppBundle:Default:services.html.twig');
     }
 
 	/**
@@ -35,7 +37,7 @@ class DefaultController extends Controller
 	 */
 	public function portfolioAction(Request $request)
     {
-       return $this->render('AppBundle:Default:portfolio.html.twig');
+		return $this->render('AppBundle:Default:portfolio.html.twig');
     }
 
 	/**
@@ -45,6 +47,25 @@ class DefaultController extends Controller
 	 */
 	public function contactAction(Request $request)
     {
-       return $this->render('AppBundle:Default:contact.html.twig');
+		$enquiry = new Enquiry();
+		$form = $this->createForm(new EnquiryType(), $enquiry);
+
+		$request = $this->getRequest();
+		if ($request->getMethod() == 'POST')
+		{
+			$form->bind($request);
+
+			if ($form->isValid())
+			{
+				// Perform some action, such as sending an email
+
+				// Redirect - This is important to prevent users re-posting
+				// the form if they refresh the page
+				return $this->redirect($this->generateUrl('contact'));
+			}
+		}
+
+		return $this->render('AppBundle:Default:contact.html.twig', array('form' => $form->createView()));
+		//return $this->render('AppBundle:Default:contact.html.twig');
     }
 }
