@@ -4,4 +4,5 @@
 /web/css/*
 /web/js/*
 /web/gallery/*
-/app/config/parameters.yml 
+/app/config/parameters.yml
+/web/error_log 
