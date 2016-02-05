@@ -1,6 +1,11 @@
 <?php
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Length;
+
 class Enquiry
 {
     protected $name;
@@ -46,6 +51,15 @@ class Enquiry
     public function setBody($body)
     {
         $this->body = $body;
+    }
+
+	public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('name', new NotBlank());
+        $metadata->addPropertyConstraint('email', new Email());
+        $metadata->addPropertyConstraint('subject', new NotBlank());
+        $metadata->addPropertyConstraint('subject', new Length(['max' => 50]));
+        $metadata->addPropertyConstraint('body', new Length(['min' => 1]));
     }
 }
 ?>

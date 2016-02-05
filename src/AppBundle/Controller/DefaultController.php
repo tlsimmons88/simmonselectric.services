@@ -66,6 +66,5 @@ class DefaultController extends Controller
 		}
 
 		return $this->render('AppBundle:Default:contact.html.twig', array('form' => $form->createView()));
-		//return $this->render('AppBundle:Default:contact.html.twig');
     }
 }
