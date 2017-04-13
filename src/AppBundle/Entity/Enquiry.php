@@ -11,7 +11,7 @@ class Enquiry
     protected $name;
     protected $email;
     protected $subject;
-    protected $body;
+    protected $message;
 
     public function getName()
     {
@@ -43,14 +43,14 @@ class Enquiry
         $this->subject = $subject;
     }
 
-    public function getBody()
+    public function getMessage()
     {
-        return $this->body;
+        return $this->message;
     }
 
-    public function setBody($body)
+    public function setMessage($message)
     {
-        $this->body = $body;
+        $this->body = $message;
     }
 
 	public static function loadValidatorMetadata(ClassMetadata $metadata)
@@ -59,7 +59,7 @@ class Enquiry
         $metadata->addPropertyConstraint('email', new Email());
         $metadata->addPropertyConstraint('subject', new NotBlank());
         $metadata->addPropertyConstraint('subject', new Length(['max' => 50]));
-        $metadata->addPropertyConstraint('body', new Length(['min' => 1]));
+        $metadata->addPropertyConstraint('message', new Length(['min' => 1]));
     }
 }
 ?>

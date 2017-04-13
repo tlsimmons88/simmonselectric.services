@@ -11,7 +11,7 @@ class EnquiryType extends AbstractType
         $builder->add('name');
         $builder->add('email', 'email');
         $builder->add('subject');
-        $builder->add('body', 'textarea');
+        $builder->add('message', 'textarea');
     }
 
 	//Method should return a unique identifier

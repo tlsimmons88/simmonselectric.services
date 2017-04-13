@@ -50,7 +50,7 @@ class DefaultController extends Controller
 		$enquiry = new Enquiry();
 		$form = $this->createForm(new EnquiryType(), $enquiry);
 
-		$request = $this->getRequest();
+		$request = $request = $this->container->get('request_stack')->getCurrentRequest();
 		if ($request->getMethod() == 'POST')
 		{
 			$form->bind($request);
@@ -58,10 +58,15 @@ class DefaultController extends Controller
 			if ($form->isValid())
 			{
 				// Perform some action, such as sending an email
+				$message = \Swift_Message::newInstance()
+					->setSubject('Contact enquiry from SimmonsElectric.services')
+					->setFrom($enquiry->getEmail())
+					->setTo($this->container->getParameter('app.emails.contact_email'))
+					->setBody($this->renderView('AppBundle:Default:contactEmail.txt.twig', array('enquiry' => $enquiry)));
+				$this->get('mailer')->send($message);
 
-				// Redirect - This is important to prevent users re-posting
-				// the form if they refresh the page
-				return $this->redirect($this->generateUrl('contact'));
+				//After email is sent show a notifacation on screen to the user
+				$this->get('session')->getFlashBag()->add('contact-notice', 'Your email was successfully sent. Thank you!');
 			}
 		}
 
